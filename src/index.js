@@ -1,17 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { Provider } from 'react-redux';
-import { BrowserRouter } from 'react-router-dom';
+import { HashRouter } from 'react-router-dom';
 import store from '../redux/store';
 import App from './App';
 import { Toaster } from 'react-hot-toast';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <BrowserRouter basename="/Portfolio"> {/* Ensure correct basename */}
-    <Provider store={store}>
-      <Toaster />
+  <Provider store={store}>
+    <Toaster />
+    <HashRouter>
       <App />
-    </Provider>
-  </BrowserRouter>
+    </HashRouter>
+  </Provider>
 );
