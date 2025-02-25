@@ -131,7 +131,7 @@ html {
 
 .down-button-2 {
     position: absolute;
-    bottom: -25em;
+    bottom: -30em;
     left: 50%;
     transform: translateX(-50%);
     font-size: 2em;
