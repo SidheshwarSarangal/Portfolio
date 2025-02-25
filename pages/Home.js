@@ -199,7 +199,7 @@ const Home = () => {
             <div className="navbar">
                 <div id="top-bar">
                     <div className="nav-item">About</div>
-                    <div className="nav-item"><a href="#Skills">Skills</a></div>
+                    <div className="nav-item"><a href="#skills-page">Skills</a></div>
                     <div className="nav-item"><a href="#Education">Education</a></div>
                     <div className="nav-item"><a href="#Projects">Projects</a></div>
                     <div className="nav-item"><a href="#Certificates">Certificates</a></div>
