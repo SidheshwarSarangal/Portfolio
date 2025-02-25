@@ -5,6 +5,10 @@
     flex-direction: column;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 /* Top Section Styling */
 .top-section {
     flex: 1;
