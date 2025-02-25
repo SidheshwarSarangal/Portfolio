@@ -199,7 +199,7 @@ const Home = () => {
             <div className="navbar">
                 <div id="top-bar">
                     <div className="nav-item">About</div>
-                    <div className="nav-item"><a href="#Skills">Skills</a></div>
+                    <div className="nav-item"><button onClick={() => document.getElementById('skills-page')?.scrollIntoView({ behavior: 'smooth' })}>Skills</button></div>
                     <div className="nav-item"><a href="#Education">Education</a></div>
                     <div className="nav-item"><a href="#Projects">Projects</a></div>
                     <div className="nav-item"><a href="#Certificates">Certificates</a></div>
