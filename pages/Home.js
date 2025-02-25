@@ -200,7 +200,7 @@ const Home = () => {
                 <div id="top-bar">
                     <div className="nav-item">About</div>
                     <div className="nav-item"><button onClick={() => document.getElementById('skills-page')?.scrollIntoView({ behavior: 'smooth' })}>Skills</button></div>
-                    <div className="nav-item"><div onClick={() => document.getElementById('info-page-container')?.scrollIntoView({ behavior: 'smooth' })}>Skills</div></div>
+                    <div className="nav-item"><div onClick={() => document.getElementById('info-page-container')?.scrollIntoView({ behavior: 'smooth' })}>Education</div></div>
                     <div className="nav-item"><a href="#Projects">Projects</a></div>
                     <div className="nav-item"><a href="#Certificates">Certificates</a></div>
                     <div className="nav-item"><a href="#Experience">Experience</a></div>
