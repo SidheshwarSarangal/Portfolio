@@ -192,14 +192,6 @@ const Home = () => {
         }
     };
 
-    const scrollToSection = (id) => {
-        const element = document.getElementById(id);
-        if (element) {
-            element.scrollIntoView({ behavior: "smooth" });
-        }
-    };
-
-    
 
     return (
         <div id="content-main">
@@ -207,33 +199,39 @@ const Home = () => {
             <div className="navbar">
                 <div id="top-bar">
                     <div className="nav-item">About</div>
-                    <div className="nav-item">
-                        <button onClick={() => scrollToSection("skills-page")}>Skills</button>
-                    </div>
-                    <div className="nav-item">
-                        <a onClick={() => scrollToSection("Education")}>Education</a>
-                    </div>
-                    <div className="nav-item">
-                        <a onClick={() => scrollToSection("Projects")}>Projects</a>
-                    </div>
-                    <div className="nav-item">
-                        <a onClick={() => scrollToSection("Certificates")}>Certificates</a>
-                    </div>
-                    <div className="nav-item">
-                        <a onClick={() => scrollToSection("Experience")}>Experience</a>
-                    </div>
-                    <div className="nav-item">
-                        <a onClick={() => scrollToSection("Passion")}>Passion</a>
-                    </div>
+                    <div className="nav-item"><a href="#Skills">Skills</a></div>
+                    <div className="nav-item"><a href="#Education">Education</a></div>
+                    <div className="nav-item"><a href="#Projects">Projects</a></div>
+                    <div className="nav-item"><a href="#Certificates">Certificates</a></div>
+                    <div className="nav-item"><a href="#Experience">Experience</a></div>
+                    <div className="nav-item"><a href="#passion">Passion</a></div>
                 </div>
             </div>
 
-            {/* Intro Section */}
             <section className="intro-section">
                 <div className="intro-container">
                     <div className="name-container">
                         <h1 className="color-change-text">
-                            SIDHESHWAR SARANGAL
+                            <span>S</span>
+                            <span>I</span>
+                            <span>D</span>
+                            <span>H</span>
+                            <span>E</span>
+                            <span>S</span>
+                            <span>H</span>
+                            <span>W</span>
+                            <span>A</span>
+                            <span>R</span>
+                        </h1>
+                        <h1 className="color-change-text">
+                            <span>S</span>
+                            <span>A</span>
+                            <span>R</span>
+                            <span>A</span>
+                            <span>N</span>
+                            <span>G</span>
+                            <span>A</span>
+                            <span>L</span>
                         </h1>
                         <div className="carousel-container">
                             {skills.map((skill, index) => (
@@ -245,89 +243,144 @@ const Home = () => {
                                 </div>
                             ))}
                         </div>
+
                     </div>
                     <div className="image-container">
                         <img
                             src="http://www.pngmart.com/files/5/Robot-PNG-File.png"
-                            alt="Profile"
+                            alt="Profile Picture"
                             className="profile-image"
                         />
                     </div>
                 </div>
-                <button onClick={() => scrollToSection("page-container")} className="down-button">
-                    <FaChevronDown />
-                </button>
+                <a href="#page-container" className="down-button">
+                    <span><FaChevronDown /> </span>
+                </a>
             </section>
 
-            {/* About Section */}
             <div id="page-container">
                 <div className="top-section">
                     <div className="content">
                         <h1>About Me</h1>
                         <p>
-                            Hello! I am a passionate developer who loves creating amazing things.
-                            I focus on building impactful applications that make a difference.
-                            I am constantly learning and growing my skills.
+                            Hello! I am a passionate developer who loves creating amazing
+                            things. I focus on building impactful applications that make a
+                            difference. I am constantly learning and growing my skills.
                         </p>
                     </div>
                 </div>
 
                 <div className="bottom-section">
-                    <h2>I Do Amazing Things</h2>
-                    <div className="icon-container">
-                        <div className="icon-item">
-                            <GrProjects className="action-icon" />
-                            <p>Projects</p>
-                        </div>
-                        <div className="icon-item">
-                            <FaRegLightbulb className="action-icon" />
-                            <p>Skills</p>
-                        </div>
-                        <div className="icon-item">
-                            <IoMdRocket className="action-icon" />
-                            <p>Passion</p>
+                    <div className="content">
+                        <h2>I Do Amazing Things</h2>
+                        <div className="icon-container">
+                            <div className="icon-item">
+                                <GrProjects className="action-icon" />
+                                <p>Projects</p>
+                            </div>
+                            <div className="icon-item">
+                                <FaRegLightbulb className="action-icon" />
+                                <p>Skills</p>
+                            </div>
+                            <div className="icon-item">
+                                <IoMdRocket className="action-icon" />
+                                <p>Passion</p>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <button onClick={() => scrollToSection("info-page-container")} className="down-button-2">
-                    <FaChevronDown />
-                </button>
+                </div>
+                <a href="#info-page-container" className="down-button-2">
+                    <span><FaChevronDown /></span>
+                </a>
             </div>
 
-            {/* Personal Info Section */}
             <div className="info-page-container" id="info-page-container">
-                <div className="personal-info-section">
-                    <h1>Personal Information</h1>
-                    <div className="info-container">
-                        <div className="info-details">
-                            <div><strong>Name:</strong> {resumeData.personalInfo?.name}</div>
-                            <div><strong>Number:</strong> {resumeData.personalInfo?.number}</div>
-                            <div><strong>Email:</strong> {resumeData.personalInfo?.email}</div>
-                            <div><strong>Location:</strong> {resumeData.personalInfo?.location}</div>
-                            <div><strong>GitHub:</strong> <a href={resumeData.personalInfo?.github} target="_blank" rel="noopener noreferrer">{resumeData.personalInfo?.github}</a></div>
-                            <div><strong>LinkedIn:</strong> <a href={resumeData.personalInfo?.Linkedin} target="_blank" rel="noopener noreferrer">{resumeData.personalInfo?.Linkedin}</a></div>
-                        </div>
-                        <div className="info-image">
-                            <img src={resumeData.personalInfo?.photo} alt="Profile" />
+                <div className="info-page-container-inner">
+
+
+                    <div className="personal-info-section">
+                        <h1 className="Personal-heading"
+                            style={{
+                                fontSize: '4rem',
+                                fontFamily: 'Trebuchet MS',
+                                fontWeight: 'bold',
+                                marginBottom: '50px',
+
+                                color: '#333',
+                                textAlign: 'left'
+                            }}>Personal Information</h1>
+                        <div className="info-container">
+                            <div className="info-details">
+                                <div><strong>Name:</strong> {resumeData.personalInfo?.name}</div>
+                                <div><strong>Number:</strong> {resumeData.personalInfo?.number}</div>
+                                <div><strong>Email:</strong> {resumeData.personalInfo?.email}</div>
+                                <div><strong>Location:</strong> {resumeData.personalInfo?.location}</div>
+                                <div><strong>GitHub:</strong> <a href={resumeData.personalInfo?.github} target="_blank" rel="noopener noreferrer">{resumeData.personalInfo?.github}</a></div>
+                                <div><strong>LinkedIn:</strong> <a href={resumeData.personalInfo?.Linkedin} target="_blank" rel="noopener noreferrer">{resumeData.personalInfo?.Linkedin}</a></div>
+
+                            </div>
+                            <div className="info-image">
+                                <img src={resumeData.personalInfo?.photo} alt="Your Photo" />
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <button onClick={() => scrollToSection("skills-page")} className="down-button-3">
-                    <FaChevronDown />
-                </button>
+                    <div className="education-section">
+                        <div className="education-inner">
+                            <h1 className="Personal-heading"
+                                style={{
+                                    fontSize: '4rem',
+                                    fontFamily: 'Trebuchet MS',
+                                    fontWeight: 'bold',
+
+
+                                    marginBottom: '50px',
+                                    color: '#333',
+
+                                }}>Education</h1>
+                            <ul className="education-list">
+                                {resumeData.education?.map((edu, index) => {
+                                    const id = `education-${edu.level.toLowerCase().replace(/ /g, '-')}`;
+                                    return (
+                                        <li key={index} onClick={() => toggleDescription(id)}>
+                                            {edu.level}: {edu.grade || edu.institute}
+                                            <Description
+                                                description={descriptions[id]}
+                                                isVisible={activeDescription === id}
+                                            />
+                                        </li>
+                                    );
+                                })}
+                            </ul>
+                        </div>
+
+                    </div>
+
+                </div>
+                <a href="#skills-page" className="down-button-3">
+                    <span><FaChevronDown /></span>
+                </a>
+
             </div>
 
-            {/* Skills Section */}
-            <div className="skills-page" id="skills-page">
+
+
+            <div
+                className="skills-page" id="skills-page"
+                style={{ backgroundImage: `url(${imageUrls[backgroundIndex]})` }}
+            >
                 <div className="skills-window">
                     <h1>SKILLS</h1>
                     <ul className="skills-list">
                         {resumeData.skills?.map((skill, index) => {
-                            const id = `skill-${skill.toLowerCase().replace(/ /g, "-")}`;
+                            const id = `skill-${skill.toLowerCase().replace(/ /g, '-')}`;
                             return (
-                                <li key={index} className="skill-tile" onClick={() => toggleDescription(id)}>
+                                <li
+                                    key={index}
+                                    className="skill-tile"
+                                    onClick={() => toggleDescription(id)}
+                                >
                                     {activeDescription === id ? (
                                         <Description
                                             description={descriptions[id]}
@@ -343,14 +396,27 @@ const Home = () => {
                 </div>
             </div>
 
-            {/* Projects Section */}
-            <div className="projects-page" id="Projects">
-                <h1>Projects</h1>
+
+            <div className="projects-page">
+                <h1
+                    style={{
+                        fontSize: '3rem',
+                        fontFamily: 'Trebuchet MS',
+                        fontWeight: 'bold',
+                        marginBottom: '10px',
+                        color: '#333',
+                        textAlign: 'left'
+                    }}
+                >PROJECTS</h1>
                 <div className="projects-container">
                     {resumeData.projects?.map((project, index) => {
-                        const id = `project-${project.name.toLowerCase().replace(/ /g, "-")}`;
+                        const id = `project-${project.name.toLowerCase().replace(/ /g, '-')}`;
                         return (
-                            <div key={index} onClick={() => handleProjectClick(id)} className="project-tile">
+                            <div
+                                key={index}
+                                onClick={() => handleProjectClick(id)}
+                                className="project-tile"
+                            >
                                 {project.name}
                             </div>
                         );
@@ -359,7 +425,12 @@ const Home = () => {
                 {popupDescription && (
                     <div className="description-popup">
                         <div className="popup-content">
-                            <button onClick={() => setPopupDescription(null)} className="close-button">&times;</button>
+                            <button
+                                className="close-button"
+                                onClick={() => setPopupDescription(null)}
+                            >
+                                &times;
+                            </button>
                             <Description
                                 description={descriptions[popupDescription]}
                                 isVisible={true}
@@ -369,40 +440,68 @@ const Home = () => {
                 )}
             </div>
 
-            {/* Certificates and Experience */}
-            <div className="certificates-experience-page" id="Certificates">
+            <div className="certificates-experience-page">
                 <div className="certificates-section">
-                    <h2>Certificates</h2>
+                    <h2
+
+                        style={{
+                            fontSize: '3rem',
+                            fontFamily: 'Trebuchet MS',
+                            fontWeight: 'bold',
+                            marginBottom: '10px',
+                            color: '#333',
+                            textAlign: 'left'
+                        }}>Certificates</h2>
                     <ul className="certificate-list">
                         {resumeData.certificates?.map((cert, index) => {
-                            const id = `certificate-${cert.toLowerCase().replace(/ /g, "-")}`;
+                            const id = `certificate-${cert.toLowerCase().replace(/ /g, '-')}`;
                             return (
-                                <li key={index} onClick={() => handleItemClick(id)} className="certificate-item">
+                                <li
+                                    key={index}
+                                    onClick={() => handleItemClick(id)}
+                                    className="certificate-item"
+                                >
                                     {cert}
                                 </li>
                             );
                         })}
                     </ul>
                 </div>
+                <div className="experience-section">
+                    <h2
 
-                <div className="experience-section" id="Experience">
-                    <h2>Experience</h2>
+                        style={{
+                            fontSize: '3rem',
+                            fontFamily: 'Trebuchet MS',
+                            fontWeight: 'bold',
+                            marginBottom: '10px',
+                            color: '#333',
+                            textAlign: 'left'
+                        }}>Experience</h2>
                     <ul className="experience-list">
                         {resumeData.experience?.map((exp, index) => {
-                            const id = `experience-${exp.toLowerCase().replace(/ /g, "-")}`;
+                            const id = `experience-${exp.toLowerCase().replace(/ /g, '-')}`;
                             return (
-                                <li key={index} onClick={() => handleItemClick(id)} className="experience-item">
+                                <li
+                                    key={index}
+                                    onClick={() => handleItemClick(id)}
+                                    className="experience-item"
+                                >
                                     {exp}
                                 </li>
                             );
                         })}
                     </ul>
                 </div>
-
                 {popupDescription1 && (
                     <div className="description-popup">
                         <div className="popup-content">
-                            <button onClick={() => setPopupDescription1(null)} className="close-button">&times;</button>
+                            <button
+                                className="close-button"
+                                onClick={() => setPopupDescription1(null)}
+                            >
+                                &times;
+                            </button>
                             <Description
                                 description={descriptions[popupDescription1]}
                                 isVisible={true}
@@ -412,12 +511,12 @@ const Home = () => {
                 )}
             </div>
 
-            {/* Passion Section */}
+
             <div id="Passion" className="section">
                 <h2>Passion</h2>
                 <div className="passion-icons-container">
                     {resumeData.passion?.map((item, index) => {
-                        const id = `passion-${item.toLowerCase().replace(/ /g, "-")}`;
+                        const id = `passion-${item.toLowerCase().replace(/ /g, '-')}`;
                         return (
                             <div key={index} className="icon-wrapper" onClick={() => togglePassion(id)}>
                                 {getIconForPassion(item)}
@@ -433,6 +532,10 @@ const Home = () => {
                     })}
                 </div>
             </div>
+
+
+
+
         </div>
     );
 };
