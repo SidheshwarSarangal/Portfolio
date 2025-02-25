@@ -113,8 +113,9 @@ const Home = () => {
                 email: "sidheshwar.sarangal@gmail.com",
                 location: "Delhi",
                 github: "https://github.com/your-profile",
-                Linkedin: "www.linkedin.com/in/sidheshwar-sarangal-0b31482b8",
-                photo: "https://via.placeholder.com/150",
+                Linkedin: "https://www.linkedin.com/in/sidheshwar-sarangal-0b31482b8",
+                
+                photo: "https://cdn2.vectorstock.com/i/1000x1000/66/56/software-developer-vector-12486656.jpg",
             },
             skills: [
                 "C++", "JavaScript", "Git and GitHub", "Data Structures and Algorithms",
@@ -318,16 +319,32 @@ const Home = () => {
                                 <div><strong>Location:</strong> {resumeData.personalInfo?.location}</div>
                                 <div>
                                     <strong>GitHub:</strong>
-                                    <button onClick={() => window.open(resumeData.personalInfo?.github, '_blank', 'noopener,noreferrer')}>
+                                    <div
+                                        onClick={() => {
+                                            const githubUrl = resumeData.personalInfo?.github?.startsWith('http')
+                                                ? resumeData.personalInfo?.github
+                                                : `https://${resumeData.personalInfo?.github}`;
+                                            window.open(githubUrl, '_blank', 'noopener,noreferrer');
+                                        }}
+                                    >
                                         {resumeData.personalInfo?.github}
-                                    </button>
+                                    </div>
                                 </div>
+
                                 <div>
                                     <strong>LinkedIn:</strong>
-                                    <button onClick={() => window.open(resumeData.personalInfo?.Linkedin, '_blank', 'noopener,noreferrer')}>
+                                    <div
+                                        onClick={() => {
+                                            const linkedinUrl = resumeData.personalInfo?.Linkedin?.startsWith('http')
+                                                ? resumeData.personalInfo?.Linkedin
+                                                : `https://${resumeData.personalInfo?.Linkedin}`;
+                                            window.open(linkedinUrl, '_blank', 'noopener,noreferrer');
+                                        }}
+                                    >
                                         {resumeData.personalInfo?.Linkedin}
-                                    </button>
+                                    </div>
                                 </div>
+
                             </div>
                             <div className="info-image">
                                 <img src={resumeData.personalInfo?.photo} alt="Your Photo" />
