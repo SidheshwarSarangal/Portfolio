@@ -198,13 +198,13 @@ const Home = () => {
             {/* Top Bar */}
             <div className="navbar">
                 <div id="top-bar">
-                    <div className="nav-item">About</div>
-                    <div className="nav-item"><button onClick={() => document.getElementById('skills-page')?.scrollIntoView({ behavior: 'smooth' })}>Skills</button></div>
+                    <div className="nav-item"><div onClick={() => document.getElementById('page-container')?.scrollIntoView({ behavior: 'smooth' })}>About</div></div>
+                    <div className="nav-item"><div onClick={() => document.getElementById('skills-page')?.scrollIntoView({ behavior: 'smooth' })}>Skills</div></div>
                     <div className="nav-item"><div onClick={() => document.getElementById('info-page-container')?.scrollIntoView({ behavior: 'smooth' })}>Education</div></div>
                     <div className="nav-item"><div onClick={() => document.getElementById('projects-page')?.scrollIntoView({ behavior: 'smooth' })}>Projects</div></div>
-                    <div className="nav-item"><a href="#Certificates">Certificates</a></div>
-                    <div className="nav-item"><a href="#Experience">Experience</a></div>
-                    <div className="nav-item"><a href="#passion">Passion</a></div>
+                    <div className="nav-item"><div onClick={() => document.getElementById('certificates-page')?.scrollIntoView({ behavior: 'smooth' })}>Certificates</div></div>
+                    <div className="nav-item"><div onClick={() => document.getElementById('certificates-page')?.scrollIntoView({ behavior: 'smooth' })}>Experience</div></div>
+                    <div className="nav-item"><div onClick={() => document.getElementById('Passion')?.scrollIntoView({ behavior: 'smooth' })}>Passion</div></div>
                 </div>
             </div>
 
@@ -253,9 +253,9 @@ const Home = () => {
                         />
                     </div>
                 </div>
-                <a href="#page-container" className="down-button">
+                <div onClick={() => document.getElementById('page-container')?.scrollIntoView({ behavior: 'smooth' })} className="down-button">
                     <span><FaChevronDown /> </span>
-                </a>
+                </div>
             </section>
 
             <div id="page-container">
@@ -290,9 +290,9 @@ const Home = () => {
                     </div>
 
                 </div>
-                <a href="#info-page-container" className="down-button-2">
+                <div onClick={() => document.getElementById('info-page-container')?.scrollIntoView({ behavior: 'smooth' })} className="down-button-2">
                     <span><FaChevronDown /></span>
-                </a>
+                </div>
             </div>
 
             <div className="info-page-container" id="info-page-container">
@@ -316,9 +316,18 @@ const Home = () => {
                                 <div><strong>Number:</strong> {resumeData.personalInfo?.number}</div>
                                 <div><strong>Email:</strong> {resumeData.personalInfo?.email}</div>
                                 <div><strong>Location:</strong> {resumeData.personalInfo?.location}</div>
-                                <div><strong>GitHub:</strong> <a href={resumeData.personalInfo?.github} target="_blank" rel="noopener noreferrer">{resumeData.personalInfo?.github}</a></div>
-                                <div><strong>LinkedIn:</strong> <a href={resumeData.personalInfo?.Linkedin} target="_blank" rel="noopener noreferrer">{resumeData.personalInfo?.Linkedin}</a></div>
-
+                                <div>
+                                    <strong>GitHub:</strong>
+                                    <button onClick={() => window.open(resumeData.personalInfo?.github, '_blank', 'noopener,noreferrer')}>
+                                        {resumeData.personalInfo?.github}
+                                    </button>
+                                </div>
+                                <div>
+                                    <strong>LinkedIn:</strong>
+                                    <button onClick={() => window.open(resumeData.personalInfo?.Linkedin, '_blank', 'noopener,noreferrer')}>
+                                        {resumeData.personalInfo?.Linkedin}
+                                    </button>
+                                </div>
                             </div>
                             <div className="info-image">
                                 <img src={resumeData.personalInfo?.photo} alt="Your Photo" />
@@ -358,9 +367,9 @@ const Home = () => {
                     </div>
 
                 </div>
-                <a href="#skills-page" className="down-button-3">
+                <div onClick={() => document.getElementById('skills-page')?.scrollIntoView({ behavior: 'smooth' })} className="down-button-3">
                     <span><FaChevronDown /></span>
-                </a>
+                </div>
 
             </div>
 
@@ -440,7 +449,7 @@ const Home = () => {
                 )}
             </div>
 
-            <div className="certificates-experience-page">
+            <div className="certificates-experience-page" id="certificates-page">
                 <div className="certificates-section">
                     <h2
 
