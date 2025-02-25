@@ -201,7 +201,7 @@ const Home = () => {
                     <div className="nav-item">About</div>
                     <div className="nav-item"><button onClick={() => document.getElementById('skills-page')?.scrollIntoView({ behavior: 'smooth' })}>Skills</button></div>
                     <div className="nav-item"><div onClick={() => document.getElementById('info-page-container')?.scrollIntoView({ behavior: 'smooth' })}>Education</div></div>
-                    <div className="nav-item"><a href="#Projects">Projects</a></div>
+                    <div className="nav-item"><div onClick={() => document.getElementById('projects-page')?.scrollIntoView({ behavior: 'smooth' })}>Projects</div></div>
                     <div className="nav-item"><a href="#Certificates">Certificates</a></div>
                     <div className="nav-item"><a href="#Experience">Experience</a></div>
                     <div className="nav-item"><a href="#passion">Passion</a></div>
@@ -397,7 +397,7 @@ const Home = () => {
             </div>
 
 
-            <div className="projects-page">
+            <div className="projects-page" id="projects-page">
                 <h1
                     style={{
                         fontSize: '3rem',
