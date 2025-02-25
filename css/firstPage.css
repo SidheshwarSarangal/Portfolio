@@ -1,0 +1,200 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+h1 {
+    font-size: 4em;
+    color: #333;
+    margin-bottom: 0px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.intro-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+    padding-top: 0;
+    margin-top: 0;
+    max-width: 70em;
+    margin: 0 auto;
+    position: relative;
+    max-height: 95em;
+}
+
+.intro-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.name-container {
+    flex: 1;
+    padding: 20px;
+}
+
+
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    /* Adjust as needed */
+}
+
+.skill {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    font-size: 40px;
+    /* Adjust this value to make the skill size bigger */
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.skill.visible {
+    opacity: 1;
+}
+
+
+
+
+.image-container {
+    flex: 1;
+    text-align: right;
+}
+
+.profile-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+
+.down-button {
+    position: absolute;
+    bottom: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2em;
+    color: #333;
+    opacity: 0.8;
+    animation: bounce 1.5s infinite;
+}
+
+.down-button:hover {
+    opacity: 1;
+    transform: translateX(-50%) translateY(5px);
+}
+
+@keyframes bounce {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-10px);
+    }
+
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+.content-section {
+    background-color: #fff;
+    padding: 50px;
+    text-align: center;
+    height: 100vh;
+}
+
+
+/* Keyframe animation for color change */
+@keyframes colorChange {
+    0% {
+        color: #43b9b97a;
+    }
+
+    25% {
+        color: #005353;
+    }
+
+    50% {
+        color: #000000;
+    }
+
+    75% {
+        color: #005353;
+    }
+
+    100% {
+        color: #43b9b97a;
+    }
+}
+
+/* Apply the color change animation to each span */
+.color-change-text span {
+    display: inline-block;
+    animation: colorChange 3s infinite;
+}
+
+/* Make sure each span starts at different times to stagger the effect */
+.color-change-text span:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.color-change-text span:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+.color-change-text span:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+.color-change-text span:nth-child(4) {
+    animation-delay: 0.3s;
+}
+
+.color-change-text span:nth-child(5) {
+    animation-delay: 0.4s;
+}
+
+.color-change-text span:nth-child(6) {
+    animation-delay: 0.5s;
+}
+
+.color-change-text span:nth-child(7) {
+    animation-delay: 0.6s;
+}
+
+.color-change-text span:nth-child(8) {
+    animation-delay: 0.7s;
+}
+
+.color-change-text span:nth-child(9) {
+    animation-delay: 0.8s;
+}
+
+.color-change-text span:nth-child(10) {
+    animation-delay: 0.9s;
+}
+
+/* You can adjust the animation duration and timing for the desired effect */

@@ -1,0 +1,161 @@
+/* Container for the entire page */
+#page-container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Top Section Styling */
+.top-section {
+    flex: 1;
+    background: linear-gradient(to bottom, #00b894, #0984e3);
+    /* Blue-green gradient */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+}
+
+.top-section .content {
+    max-width: 600px;
+    color: white;
+    margin-left: 2em;
+}
+
+.top-section h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.top-section p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+/* Bottom Section Styling */
+.bottom-section {
+    flex: 1;
+    background-color: #f5f5f5;
+    /* Normal body color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-left: 2em;
+}
+
+.bottom-section .content {
+    max-width: 600px;
+}
+
+.bottom-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+/* Button Styling */
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.action-button {
+    background-color: #0984e3;
+    /* Button color */
+    color: white;
+    padding: 12px 25px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.action-button:hover {
+    background-color: #00b894;
+    /* Hover color */
+}
+
+
+/* Icon Container Styling */
+.icon-container {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 50px;
+}
+
+.icon-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.action-icon {
+    font-size: 3rem;
+    color: #0984e3;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.icon-item p {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+/* Hover effect to create a circle around the icon */
+.icon-item:hover .action-icon {
+    transform: scale(1.2);
+    color: #00b894;
+    /* Change color on hover */
+}
+
+.icon-item:hover::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+   
+    padding: 15px;
+    pointer-events: none;
+}
+
+
+.down-button-2 {
+    position: absolute;
+    bottom: -25em;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2em;
+    color: #333;
+    opacity: 0.8;
+    animation: bounce 1.5s infinite;
+}
+
+.down-button-2:hover {
+    opacity: 1;
+    transform: translateX(-50%) translateY(5px);
+}
+
+@keyframes bounce {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-10px);
+    }
+
+    60% {
+        transform: translateY(-5px);
+    }
+}

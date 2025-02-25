@@ -1,0 +1,74 @@
+#Passion {
+    padding: 5em;
+    text-align: left;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+
+.passion-icons-container {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 10em;
+}
+
+.icon-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.icon-wrapper:hover {
+    transform: scale(1.1);
+}
+
+.passion-icon {
+    font-size: 80px;
+    margin-bottom: 15px;
+    transition: color 0.3s ease;
+}
+
+/* Color variations for icons */
+.digital-art {
+    color: #2a9d8f; /* Greenish Blue */
+}
+
+.poetry {
+    color: #264653; /* Dark Green */
+}
+
+.music-production {
+    color: #1d3557; /* Dark Blue */
+}
+
+.icon-label {
+    font-size: 1.2rem;
+    color: #333;
+    margin-top: 10px;
+}
+
+.description {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #333;
+    max-width: 300px;
+    line-height: 1.5;
+    display: none;
+}
+
+.description.visible {
+    display: block;
+}
+
+.description.hidden {
+    display: none;
+}
