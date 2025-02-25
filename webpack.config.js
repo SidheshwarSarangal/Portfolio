@@ -5,8 +5,8 @@ module.exports = {
   entry: './src/index.js',
   output: {
     filename: 'bundle.js',
-    path: path.resolve(__dirname),
-    publicPath: './',  // Change from '/Resume/' to './' for relative paths
+    path: path.resolve(__dirname, 'build'),
+    publicPath: '/SidheshwarSarangal/Portfolio',  // Change from '/Resume/' to './' for relative paths
   },
   module: {
     rules: [

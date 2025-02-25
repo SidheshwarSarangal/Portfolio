@@ -5,13 +5,12 @@
   "keywords": [],
   "license": "ISC",
   "author": "",
-  "homepage": "https://SidheshwarSarangal.github.io/Resume",
+  "homepage": "https://SidheshwarSarangal.github.io/Portfolio",
   "scripts": {
     "start": "webpack serve --config webpack.config.js --mode development",
-    "build": "webpack --config webpack.config.js --mode production",
-     "predeploy": "npm run build",
-  "deploy": "gh-pages -d docs"
-
+  "build": "webpack --config webpack.config.js --mode production",
+  "predeploy": "npm run build",
+  "deploy": "gh-pages -d build"
   },
   "devDependencies": {
     "@babel/core": "^7.26.0",
