@@ -6,7 +6,7 @@ module.exports = {
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'build'),
-    publicPath: '/Portfolio/', // Change to your repo name
+    publicPath: '.', // Change to your repo name
   },
   
   module: {
