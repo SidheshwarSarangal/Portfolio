@@ -291,9 +291,7 @@ const Home = () => {
                     </div>
 
                 </div>
-                <div onClick={() => document.getElementById('info-page-container')?.scrollIntoView({ behavior: 'smooth' })} className="down-button-2">
-                    <span><FaChevronDown /></span>
-                </div>
+                
             </div>
 
             <div className="info-page-container" id="info-page-container">
@@ -384,9 +382,7 @@ const Home = () => {
                     </div>
 
                 </div>
-                <div onClick={() => document.getElementById('skills-page')?.scrollIntoView({ behavior: 'smooth' })} className="down-button-3">
-                    <span><FaChevronDown /></span>
-                </div>
+               
 
             </div>
 
